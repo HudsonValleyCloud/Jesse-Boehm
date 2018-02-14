@@ -1,2 +1,0 @@
-# Jesse-Boehm
-Mystery Solver
