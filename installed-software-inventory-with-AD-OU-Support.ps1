@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 #Installed Software Inventory Script
-#Active Directory OU Integration - V1.0
+#Active Directory OU Integration - V1.1
 Clear
 #Get All Installed Software
 Get-WmiObject -Class Win32_Product | Select-Object -Property PSComputerName, Vendor, Name, Version, InstallDate | Sort-Object PSComputerName, Vendor, Name, Version, InstallDate | Format-Table -Auto
@@ -17,6 +17,7 @@ Get-WmiObject -Class Win32_Product | Select-Object -Property PSComputerName, Ven
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
+#Domain Computer Object Searching.... This can take a long time. Test with a Small OU first.
 #Get Drivers on Computers in a Base OU
 #Create a -SearchBase which we can turn into -ComputerName Value to loop Through all VMs that are AD Joined.
 Clear
